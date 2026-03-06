@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 4: Warm & Cozy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5ede0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .label {
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+      background: #5c3d2e; color: white; padding: 6px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    }
+    .card {
+      background: #fffaf4;
+      border-radius: 24px;
+      padding: 48px 44px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(92, 61, 46, 0.12);
+      border: 1px solid #ede0cc;
+    }
+    .header {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 28px;
+    }
+    .coffee-icon { font-size: 24px; }
+    .brand { font-family: 'Lora', serif; font-size: 16px; color: #8b6347; font-weight: 600; }
+    .progress {
+      height: 4px; background: #ede0cc; border-radius: 4px; margin-bottom: 36px;
+    }
+    .progress-fill { height: 100%; width: 40%; background: linear-gradient(90deg, #c9824a, #e8a06a); border-radius: 4px; }
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 22px; font-weight: 500; color: #3d2b1f;
+      margin-bottom: 28px; line-height: 1.5;
+    }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option {
+      padding: 16px 20px;
+      border-radius: 14px;
+      border: 1.5px solid #ede0cc;
+      background: white;
+      font-size: 15px; color: #6b4c3b;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .dot {
+      width: 16px; height: 16px; border-radius: 50%;
+      border: 1.5px solid #d4b89a; flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .option:hover { border-color: #c9824a; background: #fff8f2; }
+    .option.selected { border-color: #c9824a; background: #fff5eb; }
+    .option.selected .dot { background: #c9824a; border-color: #c9824a; }
+    .next {
+      margin-top: 28px;
+      padding: 15px 28px;
+      background: linear-gradient(135deg, #c9824a, #e8a06a);
+      color: white; border: none; border-radius: 14px;
+      font-size: 15px; font-weight: 500;
+      cursor: pointer; width: 100%;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="label">STYLE 4 — WARM & COZY</div>
+  <div class="card">
+    <div class="header">
+      <span class="coffee-icon">☕</span>
+      <span class="brand">What's Your Coffee Personality?</span>
+    </div>
+    <div class="progress"><div class="progress-fill"></div></div>
+    <h2>It's Friday night. What are you doing?</h2>
+    <div class="options">
+      <div class="option"><div class="dot"></div> Hosting a dinner party for all my friends</div>
+      <div class="option"><div class="dot"></div> Reading with a cozy blanket and tea</div>
+      <div class="option selected"><div class="dot"></div> Working late — there's always more to do</div>
+      <div class="option"><div class="dot"></div> Treating myself to dessert and a movie</div>
+    </div>
+    <button class="next">Next Question →</button>
+  </div>
+</body>
+</html>
